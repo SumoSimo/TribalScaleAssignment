@@ -66,11 +66,33 @@ class UserDetailViewController: UITableViewController {
       
       let selector: Selector
       
+      let isEnabled: Bool
+      
       if indexPath.row == 1 {
+        
+        if let phoneURL = URL(string: "tel://\(user.cellPhoneNumber)"), UIApplication.shared.canOpenURL(phoneURL) {
+          
+          isEnabled = true
+          
+        } else {
+          
+          isEnabled = false
+          
+        }
         
         selector = #selector(UserDetailViewController.tryCalling)
         
       } else {
+        
+        if let emailURL = URL(string: "mailto:\(user.email)"), UIApplication.shared.canOpenURL(emailURL) {
+          
+          isEnabled = true
+          
+        } else {
+          
+          isEnabled = false
+          
+        }
         
         selector = #selector(UserDetailViewController.tryEmailing)
         
@@ -82,6 +104,7 @@ class UserDetailViewController: UITableViewController {
       ) as! SubjectDetailButtonCell
       subjectDetailButtonCell.subjectLabel.text = subject
       subjectDetailButtonCell.detailButton.setTitle(detail, for: .normal)
+      subjectDetailButtonCell.detailButton.isEnabled = isEnabled
       subjectDetailButtonCell.detailButton.addTarget(self, action: selector, for: .touchUpInside)
       
       cell = subjectDetailButtonCell
