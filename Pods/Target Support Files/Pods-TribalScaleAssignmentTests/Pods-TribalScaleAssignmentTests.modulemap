@@ -1,0 +1,6 @@
+framework module Pods_TribalScaleAssignmentTests {
+  umbrella header "Pods-TribalScaleAssignmentTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
