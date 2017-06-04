@@ -698,6 +698,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = TribalScaleAssignmentWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.TribalScaleAssignment.TribalScaleAssignmentWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,6 +712,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = TribalScaleAssignmentWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.TribalScaleAssignment.TribalScaleAssignmentWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -820,6 +822,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = TribalScaleAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.TribalScaleAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -836,6 +839,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QWKKLM397G;
 				INFOPLIST_FILE = TribalScaleAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simontsai.TribalScaleAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
