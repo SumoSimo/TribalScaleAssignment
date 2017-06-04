@@ -27,6 +27,8 @@ class UserViewController: UITableViewController {
         
       }
       
+      MBProgressHUD.hide(for: self.view, animated: true)
+      
       let tryAgainAction = UIAlertAction(title: "Try Again", style: .default, handler: { _ in
         
         self.fetchUsers()
