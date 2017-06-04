@@ -42,6 +42,18 @@ class UserRepository {
             
             let payload = try! JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
             
+            guard !payload.contains(where: { key, _ -> Bool in
+              
+              return key == "error"
+              
+            }) else {
+              
+              failure?()
+              
+              return
+              
+            }
+            
             let allUsersPayload = payload["results"] as! [[String: Any]]
             
             var users: [User] = []
@@ -53,6 +65,10 @@ class UserRepository {
             }
             
             success?(users)
+            
+          } else {
+            
+            failure?()
             
           }
           

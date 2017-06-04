@@ -113,6 +113,27 @@ class UserFetchingTests: XCTestCase {
     
   }
   
+  func testUserFetchingConfiguredWithErrorResponseShouldFail() {
+    
+    let responsePayload = "{\"error\": \"Uh oh, something has gone wrong. Please tweet us @randomapi about the issue. Thank you.\"}"
+    
+    let responseData = responsePayload.data(using: .utf8)!
+    
+    let mockURLSession = MockURLSession(responseData: responseData)
+    
+    let userRepository = UserRepository(urlSession: mockURLSession)
+    userRepository.fetch(withSuccess: { _ in
+      
+      XCTAssert(false, "The fetch should have failed since there was an error")
+      
+    }, failure: {
+      
+      XCTAssert(true)
+      
+    })
+    
+  }
+  
 }
 
 class UserTests: XCTestCase {
