@@ -7,4 +7,6 @@
 3) The app should run without any problems. If running on a device, please confirm it is at least iOS 10.
 
 ## Note
-In order to see the birthday widget, please use a real device and enable the widget.
+* Please use a real device to test the calling and emailing functionality. Those two features won't work on a simulator (e.g. simulator can't make calls).
+
+* In order to see the birthday widget, please use a real device and enable the widget.
