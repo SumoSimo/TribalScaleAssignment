@@ -56,13 +56,9 @@ class UserRepository {
             
             let allUsersPayload = payload["results"] as! [[String: Any]]
             
-            var users: [User] = []
-            
-            for userPayload in allUsersPayload {
-              
-              users.append(User(userPayload: userPayload))
-              
-            }
+            let users = allUsersPayload.map({ userPayload -> User in
+                return User(userPayload: userPayload)
+            })
             
             success?(users)
             
